@@ -1,0 +1,5 @@
+autopep8
+nose
+flake8
+coverage
+requests

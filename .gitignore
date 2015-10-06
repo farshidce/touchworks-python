@@ -1,0 +1,29 @@
+*.py[cod]
+*.ipynb
+venv
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+develop-eggs
+.installed.cfg
+venv*
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+.project
+.pydevproject
+.idea
