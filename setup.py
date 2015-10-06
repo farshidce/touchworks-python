@@ -21,7 +21,7 @@ setup(
     author="Farshid Ghods",
     author_email="farshid.ghods@gmail.com",
     url="https://github.com/farshidce/touchworks-python",
-    download_url="https://github.com/farshidce/touchworks-python/tarball/0.9",
+    download_url="https://github.com/farshidce/touchworks-python/tarball/0.1",
     description="Allscripts Touchworks API Client for Python",
     packages=["touchworks"],
     platforms="any",

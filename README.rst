@@ -56,18 +56,36 @@ will contain the error received from the TouchWorks WebService APIs.
 ## example 1:
 service username or password is invalid:
 .. code-block:: python
-touchworks.api.http.TouchWorksException: unable to acquire the token from web service
+
+	touchworks.api.http.TouchWorksException: unable to acquire the token from web service
 
 ## example 2:
 SaveNot action failed
 .. code-block:: python
-touchworks.api.http.TouchWorksException: magic json api failed : Error converting data type varchar to numeric.
+
+	touchworks.api.http.TouchWorksException: magic json api failed : Error converting data type varchar to numeric.
 
 ## logging
 in order to enable debugging user can set the logging level to DEBUG.when DEBUG is enabled
 the library will print out each request and response in the logs.
 
 
+## Developers
+
+### build
+
+.. code-block:: bash
+
+	make
+
+### test
+
+.. code-block:: bash
+	make tests
+
+### add supprt for new APIs
+
+TBD 
 
 Supported Python Versions
 -------------------------
