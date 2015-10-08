@@ -5,6 +5,7 @@ import uuid
 from touchworks.logger import Logger
 import pprint
 from nose.tools import raises
+import random
 
 logger = Logger.get_logger(__name__)
 
@@ -25,6 +26,7 @@ class TestAPIs(unittest.TestCase):
         self.api = TouchWorks(base_url=self.url,
                               username=self.svc_username,
                               password=self.svc_password,
+                              app_username=self.config['ehr_username'],
                               app_name=self.app_name,
                               cache_token=True)
         self.api.get_dictionary('Document_Type_DE')
@@ -37,10 +39,9 @@ class TestAPIs(unittest.TestCase):
                               username=self.svc_username,
                               password=self.svc_password,
                               app_name=self.app_name,
-                              cache_token=True,
-                              app_username=self.config['ehr_username'])
-        patients = self.api.search_patients(self.config['ehr_username'],
-                                            'J*', 'N')
+                              app_username=self.config['ehr_username'],
+                              cache_token=True)
+        patients = self.api.search_patients('J*', 'N')
         self.api.save_note('hello there', document_type='Consult',
                            patient_id=patients[0]['ID'],
                            document_status='Final',
@@ -50,14 +51,13 @@ class TestAPIs(unittest.TestCase):
         self.api = TouchWorks(base_url=self.url,
                               username=self.svc_username,
                               password=self.svc_password,
+                              app_username=self.config['ehr_username'],
                               app_name=self.app_name,
                               cache_token=True)
-        patients = self.api.search_patients(self.config['ehr_username'],
-                                            'J*', 'N')
+        patients = self.api.search_patients('J*', 'N')
         if patients and len(patients) >= 5:
             for patient in patients[0:5]:
-                encounters = self.api.get_encounter_list_for_patient(self.config['ehr_username'],
-                                                                     patient_id=patient['ID'])
+                encounters = self.api.get_encounter_list_for_patient(patient_id=patient['ID'])
                 for encounter in encounters:
                     logger.debug(pprint.pformat(encounter))
                     self.api.save_unstructured_document(
@@ -73,10 +73,10 @@ class TestAPIs(unittest.TestCase):
         self.api = TouchWorks(base_url=self.url,
                               username=self.svc_username,
                               password=self.svc_password,
+                              app_username=self.config['ehr_username'],
                               app_name=self.app_name,
                               cache_token=True)
-        patients = self.api.search_patients(self.config['ehr_username'],
-                                            'J*', 'N')
+        patients = self.api.search_patients('J*', 'N')
         if patients and len(patients) >= 5:
             for patient in patients[0:5]:
                 self.api.get_patient(ehr_username=self.config['ehr_username'],
@@ -87,6 +87,7 @@ class TestAPIs(unittest.TestCase):
         self.api = TouchWorks(base_url=self.url,
                               username=self.svc_username,
                               password=self.svc_password,
+                              app_username=self.config['ehr_username'],
                               app_name=self.app_name,
                               cache_token=True)
         types = ['Chart', 'Consult', 'SpecReport', 'ChartCopy']
@@ -102,7 +103,8 @@ class TestAPIs(unittest.TestCase):
                               app_name=self.app_name,
                               cache_token=True)
         schedules = self.api.get_schedule(ehr_username=self.config['ehr_username'],
-                                          start_date='9/1/2015|10/4/2015',
+                                          start_date='9/1/2015',
+                                          end_date='10/4/2015',
                                           changed_since='',
                                           include_pix='',
                                           other_user='',
@@ -125,3 +127,26 @@ class TestAPIs(unittest.TestCase):
                               password='wrong password',
                               app_name=self.app_name,
                               cache_token=True)
+
+    def test_patients(self):
+        self.api = TouchWorks(base_url=self.url,
+                              username=self.svc_username,
+                              password=self.svc_password,
+                              app_name=self.app_name,
+                              app_username=self.config['ehr_username'],
+                              cache_token=True)
+        patients = self.api.search_patients('F*')
+        for patient in random.sample(patients, 3):
+            encounters = self.api.get_encounter_list_for_patient(patient['ID'])
+            # get patient clinical summary
+            for encounter in encounters:
+                logger.info('encounter : %s' % pprint.pformat(encounter))
+                clinical_summary = self.api.get_clinical_summary(
+                    patient_id=patient['ID'],
+                    encounter_id_identifer=encounter['Encounterid'],
+                    section='')
+                logger.info('clinical summary : \n%s' % pprint.pformat(clinical_summary))
+            # patient activity
+            activities = self.api.get_patient_activity(patient['ID'])
+            for activity in activities:
+                logger.info('\n%s' % pprint.pformat(activity))
