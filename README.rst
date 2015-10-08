@@ -60,38 +60,38 @@ Please see http://developer.allscripts.com/ for more information
 
 APIs Available
 --------------
-	save_note
-	search_patients
-	get_document_type
-	get_patient
-	get_encounter
-	get_dictionary
-	find_document_type_by_name
-	get_encounter_list_for_patient
-	save_unstructured_document
-	set_patient_location_and_status
-	get_clinical_summary
-	get_patient_activity
-	set_patient_medhx_flag
-	get_changes_patients
-	get_patients_locations
-	get_patient_pharmacies
-	get_user_id
-	get_provider
-	get_provider_info
-	get_providers
-	get_task_list
-	save_message_from_pat_portal
-	save_task_comment
-	get_task
-	save_task_status
-	search_task_views
-	save_task
-	get_task_comments
-	get_delegates
-	get_task_list_by_view
-	get_schedule
-	get_documents
+* 	save_note
+* 	search_patients
+* 	get_document_type
+* 	get_patient
+* 	get_encounter
+* 	get_dictionary
+* 	find_document_type_by_name
+* 	get_encounter_list_for_patient
+* 	save_unstructured_document
+* 	set_patient_location_and_status
+* 	get_clinical_summary
+* 	get_patient_activity
+* 	set_patient_medhx_flag
+* 	get_changes_patients
+* 	get_patients_locations
+* 	get_patient_pharmacies
+* 	get_user_id
+* 	get_provider
+* 	get_provider_info
+* 	get_providers
+* 	get_task_list
+* 	save_message_from_pat_portal
+* 	save_task_comment
+* 	get_task
+* 	save_task_status
+* 	search_task_views
+* 	save_task
+* 	get_task_comments
+* 	get_delegates
+* 	get_task_list_by_view
+* 	get_schedule
+* 	get_documents
 
 
 Error Handing
@@ -149,13 +149,13 @@ License
 See LICENSE_ for details.
 
 .. _documentation: http://developer.allscripts.com/
-.. _issues: https://github.com/farshidce/touchworkds/issues
+.. _issues: https://github.com/farshidce/touchworks/issues
 .. _PyPI: https://pypi.python.org/pypi
 .. _pip: https://pypi.python.org/pypi/pip
 .. _LICENSE: LICENSE.txt
 .. _IPython: http://ipython.org/
 
-.. |version| image:: https://badge.fury.io/py/pokitdok.svg
+.. |version| 
     :target: https://pypi.python.org/pypi/touchworks/
 
 .. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
