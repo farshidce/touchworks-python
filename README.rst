@@ -100,14 +100,13 @@ Error Handing
 All supported APIs right now raise an exception of type TouchWorksException where the string
 will contain the error received from the TouchWorks WebService APIs.
 
-* example 1:
-service username or password is invalid:
+- example 1: service username or password is invalid:
+
 .. code-block:: python
 
     touchworks.api.http.TouchWorksException: unable to acquire the token from web service
 
-* example 2:
-SaveNot action failed
+example 2: SaveNot action failed
 .. code-block:: python
 
     touchworks.api.http.TouchWorksException: magic json api failed : Error converting data type varchar to numeric.
@@ -135,19 +134,21 @@ to the repository.
 
 create a config.json file which contains these keys
 
-```json
+.. code-block:: javascript
 
-{
-  "server": "http://somesandbox.com/Unity/UnityService.svc",
-  "appname": "Test App Name assigned to you",
-  "serviceusername": "Test Service User assigned to you",
-  "servicepassword": "Test Service Password assigned to you",
-  "ehr_username": "username that works on the sandbox",
-  "ehr_password": "password which would work on the sandbox"
-}
-```
+    {
+        "server": "http://somesandbox.com/Unity/UnityService.svc",
+        "appname": "Test App Name assigned to you",
+        "serviceusername": "Test Service User assigned to you",
+        "servicepassword": "Test Service Password assigned to you",
+        "ehr_username": "username that works on the sandbox",
+        "ehr_password": "password which would work on the sandbox"
+    }
+
+and then
 
 .. code-block:: bash
+
     make tests
 
 Supported Python Versions
