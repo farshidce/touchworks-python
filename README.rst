@@ -145,7 +145,6 @@ create a config.json file which contains these keys
   "ehr_username": "username that works on the sandbox",
   "ehr_password": "password which would work on the sandbox"
 }
-
 ```
 
 .. code-block:: bash
@@ -172,6 +171,11 @@ See LICENSE_ for details.
 .. _LICENSE: LICENSE.txt
 .. _IPython: http://ipython.org/
 
+
+.. |build| image:: https://api.travis-ci.org/farshidce/touchworks-python.svg?branch=master
+    :target: https://travis-ci.org/farshidce/touchworks-python/
+    :alt: Build status of the master branch
+
 .. |pypi| image:: https://img.shields.io/pypi/v/touchworks.svg?style=flat-square&label=latest%20version
     :target: https://pypi.python.org/pypi/touchworks
     :alt: Latest version released on PyPi
@@ -181,7 +185,3 @@ See LICENSE_ for details.
 
 .. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
     :target: https://pypi.python.org/pypi/touchworks/
-
-.. |build| image:: https://api.travis-ci.org/farshidce/touchworks-python.svg?branch=master
-    :target: https://travis-ci.org/farshidce/touchworks-python/
-    :alt: Build status of the master branch
