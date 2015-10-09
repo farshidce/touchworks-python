@@ -356,7 +356,7 @@ class TouchWorks(object):
         doc_xml = "<docParams><item name='documentCommand' value='I'/>" + \
                   "<item name='documentType'  value='Chart'/>" + \
                   "<item name='authorCode' value='ResLet'/>" + \
-                  "<item name='ahsEncounterID' value=‘@@ENCOUNTERID@@’/>" + \
+                  "<item name='ahsEncounterID' value='@@ENCOUNTERID@@’/>" + \
                   "<item name='OrganizationID' value=''/>" + \
                   "<item name='accessionValue' value=''/>" + \
                   "<item name='appGroup' value='TouchWorks'/></docParams>"
