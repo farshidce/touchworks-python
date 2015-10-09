@@ -26,4 +26,6 @@ tests: flake8
 	$(VIRTBINPATH)/nosetests tests/*.py
 package:
 	$(VIRTBINPATH)/python setup.py build
+pypi:
+	python setup.py bdist bdist_wininst sdist upload -r pypi
 
