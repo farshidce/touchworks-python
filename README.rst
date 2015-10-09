@@ -1,7 +1,7 @@
 |version| |wheel| |python3|
 
 Allscripts Touchworks Platform API Client for Python
-=====================================================
+====================================================
 
 Installation
 ------------
@@ -100,32 +100,50 @@ Error Handing
 All supported APIs right now raise an exception of type TouchWorksException where the string
 will contain the error received from the TouchWorks WebService APIs.
 
-## example 1:
+* example 1:
 service username or password is invalid:
 .. code-block:: python
 
     touchworks.api.http.TouchWorksException: unable to acquire the token from web service
 
-## example 2:
+* example 2:
 SaveNot action failed
 .. code-block:: python
 
     touchworks.api.http.TouchWorksException: magic json api failed : Error converting data type varchar to numeric.
 
-## logging
+Logging
+-------
 in order to enable debugging user can set the logging level to DEBUG.when DEBUG is enabled
 the library will print out each request and response in the logs.
 
+Developers
+----------
 
-## Developers
-
-### build
+* build instructions:
 
 .. code-block:: bash
 
     make
 
-### test
+flake8 is used to ensure that there are no syntax issues with the code. if you are
+contributing to the code base please make sure make is passing before you push the changes
+to the repository.
+
+* test
+
+create a config.json file which contains these keys
+
+.. code-block:: bash
+
+{
+  "server": "http://somesandbox.com/Unity/UnityService.svc",
+  "appname": "Test App Name assigned to you",
+  "serviceusername": "Test Service User assigned to you",
+  "servicepassword": "Test Service Password assigned to you",
+  "ehr_username": "username that works on the sandbox",
+  "ehr_password": "password which would work on the sandbox"
+}
 
 .. code-block:: bash
     make tests
@@ -155,8 +173,9 @@ See LICENSE_ for details.
 .. _LICENSE: LICENSE.txt
 .. _IPython: http://ipython.org/
 
-.. |version| 
-    :target: https://pypi.python.org/pypi/touchworks/
+.. |pypi| image:: https://img.shields.io/pypi/v/touchworks.svg?style=flat-square&label=latest%20version
+    :target: https://pypi.python.org/pypi/touchworks
+    :alt: Latest version released on PyPi
 
 .. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
     :target: https://pypi.python.org/pypi/touchworks/
