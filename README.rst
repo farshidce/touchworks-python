@@ -1,4 +1,4 @@
-|version| |wheel| |python3|
+|pypi| |wheel| |python3|
 
 Allscripts Touchworks Platform API Client for Python
 ====================================================
@@ -126,6 +126,7 @@ Developers
 
     make
 
+
 flake8 is used to ensure that there are no syntax issues with the code. if you are
 contributing to the code base please make sure make is passing before you push the changes
 to the repository.
@@ -134,7 +135,7 @@ to the repository.
 
 create a config.json file which contains these keys
 
-.. code-block:: bash
+```json
 
 {
   "server": "http://somesandbox.com/Unity/UnityService.svc",
@@ -145,12 +146,10 @@ create a config.json file which contains these keys
   "ehr_password": "password which would work on the sandbox"
 }
 
+```
+
 .. code-block:: bash
     make tests
-
-### add supprt for new APIs
-
-TBD 
 
 Supported Python Versions
 -------------------------
@@ -177,8 +176,8 @@ See LICENSE_ for details.
     :target: https://pypi.python.org/pypi/touchworks
     :alt: Latest version released on PyPi
 
-.. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
-    :target: https://pypi.python.org/pypi/touchworks/
-
 .. |python3| image:: https://caniusepython3.com/project/touchworks.svg
     :target: https://caniusepython3.com/project/touchworks
+
+.. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
+    :target: https://pypi.python.org/pypi/touchworks/
