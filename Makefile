@@ -1,7 +1,7 @@
 VIRTBINPATH:=venv/bin/
 ENVPATH:=venv
 
-all: init flake8 package tests
+all: init flake8 package
 
 clean:
 	rm -rf $(VIRTBINPATH)

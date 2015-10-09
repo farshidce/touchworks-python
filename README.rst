@@ -1,4 +1,4 @@
-|pypi| |wheel| |python3|
+|pypi| |wheel| |python3| |build|
 
 Allscripts Touchworks Platform API Client for Python
 ====================================================
@@ -181,3 +181,7 @@ See LICENSE_ for details.
 
 .. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
     :target: https://pypi.python.org/pypi/touchworks/
+
+.. |build| image:: https://api.travis-ci.org/farshidce/touchworks-python.svg?branch=master
+    :target: https://travis-ci.org/farshidce/touchworks-python/
+    :alt: Build status of the master branch
