@@ -16,12 +16,12 @@ from setuptools import setup
 
 setup(
     name="touchworks",
-    version="0.2",
+    version="0.3",
     license="MIT",
     author="Farshid Ghods",
     author_email="farshid.ghods@gmail.com",
     url="https://github.com/farshidce/touchworks-python",
-    download_url="https://github.com/farshidce/touchworks-python/tarball/0.2",
+    download_url="https://github.com/farshidce/touchworks-python/tarball/0.3",
     description="Allscripts Touchworks API Client for Python",
     packages=["touchworks"],
     platforms="any",

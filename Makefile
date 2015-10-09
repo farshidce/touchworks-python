@@ -6,6 +6,9 @@ all: init flake8 package
 clean:
 	rm -rf $(VIRTBINPATH)
 	rm -rf $(ENVPATH)
+	rm -rf build
+	rm -rf *.egg-info
+
 
 virtualenv:
 	test -d $(VIRTBINPATH)/activate || virtualenv venv
