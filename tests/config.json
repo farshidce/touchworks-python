@@ -1,0 +1,8 @@
+{
+  "server": "http://twlatestga.unitysandbox.com/Unity/UnityService.svc",
+  "appname": "Home.survey-submission.TestApp",
+  "serviceusername": "***********",
+  "servicepassword": "***********",
+  "ehr_username": "*****",
+  "ehr_password": "*****"
+}
