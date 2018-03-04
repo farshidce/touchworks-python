@@ -184,5 +184,5 @@ See LICENSE_ for details.
 .. |python3| image:: https://caniusepython3.com/project/touchworks.svg
     :target: https://caniusepython3.com/project/touchworks
 
-.. |wheel| image:: https://pypip.in/wheel/touchworks/badge.png
+.. |wheel| image:: https://img.shields.io/pypi/wheel/touchworks.svg
     :target: https://pypi.python.org/pypi/touchworks/
